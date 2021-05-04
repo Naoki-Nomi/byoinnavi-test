@@ -42,7 +42,7 @@ end
 
 headers = ["病院名", "電話番号", "住所", "病院のサイトURL"]
 
-CSV.open("byoinnavi.csv", "w") do |csv|
+CSV.open("byoinnavi.csv", "w:utf-8") do |csv|
   csv << headers
   names.length.times do |n|
     csv << [names[n], tells[n], addresses[n], urls[n]]
